@@ -9,11 +9,10 @@ services:
   nginx1:
     build: ./nginx
     ports:
-        - 80:80
         - 443:443
 
     environment:
-      - SERVER_NAME=0.0.0.0
+      - SERVER_NAME=54.237.99.196
     depends_on:
         - web1
    
