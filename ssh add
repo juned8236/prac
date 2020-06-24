@@ -1,6 +1,0 @@
-
-
-ssh -i juned.pem ubuntu@35.175.102.59
-if error 
-chmod 400 juned.pem
-
