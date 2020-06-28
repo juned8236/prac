@@ -3,7 +3,7 @@ version: '2.2'
 services:
   web1:
     build: ./backend
-    command: gunicorn config.wsgi:application --bind 0.0.0.0:443 --workers=5
+    command: gunicorn config.wsgi:application --certfile cert.crt --keyfile certkey.key --bind 0.0.0.0:443 --workers=5
     expose:
         - 443           
   nginx1:
@@ -12,7 +12,7 @@ services:
         - 443:443
 
     environment:
-      - SERVER_NAME=54.237.99.196
+      - SERVER_NAME=0.0.0.0
     depends_on:
         - web1
    
